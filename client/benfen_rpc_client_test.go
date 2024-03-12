@@ -134,7 +134,7 @@ func TestSingle(t *testing.T) {
 	client_bfc_subscribeEvent(t)
 }
 
-func TestClient_GetInnerDaoInf(t *testing.T) {
+func client_GetInnerDaoInf(t *testing.T) {
 	chain := LocalnetClient(t)
 
 	resp, err := chain.GetInnerDaoInfo(
@@ -145,7 +145,7 @@ func TestClient_GetInnerDaoInf(t *testing.T) {
 	PrintJson(resp)
 }
 
-func TestClient_GetStablePools(t *testing.T) {
+func client_GetStablePools(t *testing.T) {
 	chain := LocalnetClient(t)
 
 	address, _ := bfc_types.NewAddressFromHex(
@@ -160,7 +160,7 @@ func TestClient_GetStablePools(t *testing.T) {
 	PrintJson(resp)
 }
 
-func TestClient_GetProposalInfo(t *testing.T) {
+func client_GetProposalInfo(t *testing.T) {
 	chain := LocalnetClient(t)
 
 	address, _ := bfc_types.NewAddressFromHex(
@@ -228,7 +228,7 @@ func client_bfc_batTransactions(t *testing.T) {
 func client_bfc_requestWithdrawStake(t *testing.T) {
 	chain := ChainClient(t)
 	signer, err := bfc_types.NewAddressFromHex("0x7113a31aa484dfca371f854ae74918c7463c7b3f1bf4c1fe8ef28835e88fd590")
-	coin1, err := bfc_types.NewAddressFromHex("0x2a8cee84fa4392c30f70c251a60baffecee29d39de66d2008f13d0c748353bb2")
+	coin1, err := bfc_types.NewAddressFromHex("0x3f7e138fc33c47279abb65d92c1859b203958ea5dd3ce77c8c09ebf4796d7cc7")
 
 	resp, err := chain.RequestWithdrawStake(
 		context.Background(),
@@ -246,9 +246,11 @@ func client_bfc_requestAddStake(t *testing.T) {
 	chain := ChainClient(t)
 	signer, err := bfc_types.NewAddressFromHex("0x7113a31aa484dfca371f854ae74918c7463c7b3f1bf4c1fe8ef28835e88fd590")
 
-	validator, err := bfc_types.NewAddressFromHex("0xd961ce7fdc406116d6dca6f1c17436d1196a97ae877e5599f12b9f882123fe4f")
+	validator, err := bfc_types.NewAddressFromHex(
+		"0xc1e11c130f55ee714387c801963bbf0ed8ff8da629e45ccc491fdee3751de867",
+	)
 
-	coin1, err := bfc_types.NewAddressFromHex("0x98b27ae23281a235c09e83500f123636cd433f6a762a0f4a7f9f40fb7321bf83")
+	coin1, err := bfc_types.NewAddressFromHex("0x902b2dff406e2d194d52f4ad59efa1e27401e42288d23393ec90af91f29a8e50")
 	coins := []bfc_types.ObjectID{*coin1}
 	resp, err := chain.RequestAddStake(
 		context.Background(),

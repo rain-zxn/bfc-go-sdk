@@ -493,7 +493,7 @@ func TestClient_TryGetPastObject(t *testing.T) {
 // change to corrent event hash digest. 6vRkJ5TconcXL8SEsMAN3ZDU4dcFtJv6AVndXPNgn49Q
 func TestClient_GetEvents(t *testing.T) {
 	cli := ChainClient(t)
-	digest := "9wfNFxA8Vd8kmmw4JYvNvqiNsr6V1uoTx8zgybrxf2MY"
+	digest := "6yeP7RRSrtvmFD7s2Spuh1PuTSAquk9vQH66VmsZjVWw"
 	d, err := bfc_types.NewDigest(digest)
 	require.Nil(t, err)
 	res, err := cli.GetEvents(context.Background(), *d)

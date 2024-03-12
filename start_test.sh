@@ -22,6 +22,7 @@ go test
 echo "lib test done"
 
 cd ../client
+echo "client test start"
 go test
 echo "client test done"
 

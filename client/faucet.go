@@ -13,7 +13,7 @@ import (
 )
 
 const (
-	DevNetFaucetUrl  = "https://obcfaucet.openblock.vip/gas"
+	DevNetFaucetUrl  = "https://testfaucet.benfen.org/gas"
 	TestNetFaucetUrl = "https://obcfaucet.openblock.vip/gas"
 )
 

@@ -11,14 +11,15 @@ import (
 )
 
 const (
-	ValidatorAddress = "0xd961ce7fdc406116d6dca6f1c17436d1196a97ae877e5599f12b9f882123fe4f"
+	//BFCfa3e3de9234310250db910e45452dc063358d2e452b19d9253e3d96162d539b85ea8
+	ValidatorAddress = "0xfa3e3de9234310250db910e45452dc063358d2e452b19d9253e3d96162d539b8"
 )
 
 func TestClient_GetLatestSuiSystemState(t *testing.T) {
 	cli := ChainClient(t)
-	state, err := cli.GetLatestSuiSystemState(context.Background())
+	_, err := cli.GetLatestSuiSystemState(context.Background())
 	require.Nil(t, err)
-	t.Logf("system state = %v", state)
+	//t.Logf("system state = %v", state)
 }
 
 func TestClient_GetValidatorsApy(t *testing.T) {

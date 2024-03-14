@@ -607,7 +607,7 @@ func TestClient_QueryEvents(t *testing.T) {
 			args: args{
 				ctx: context.TODO(),
 				query: types.EventFilter{
-					Sender: Address,
+					Sender: CrossChainAddress,
 				},
 				cursor:          nil,
 				limit:           &limit,

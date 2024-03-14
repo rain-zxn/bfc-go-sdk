@@ -18,6 +18,7 @@ var (
 	M1Mnemonic = "monkey tragic drive owner fade mimic taxi despair endorse peasant amused woman"
 
 	Address, _ = bfc_types.NewAddressFromHex("0x7419050e564485685f306e20060472fca1b3a4453b41bdace0010624801b11ea")
+	CrossChainAddress, _ = bfc_types.NewAddressFromHex("0x7419050e564485685f306e20060472fca1b3a4453b41bdace0010624801b11ea")
 )
 
 func MainnetClient(t *testing.T) *Client {

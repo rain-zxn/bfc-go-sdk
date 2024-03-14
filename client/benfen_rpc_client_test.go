@@ -60,6 +60,11 @@ func client_bfcx_getReferenceGasPrice(t *testing.T) {
 	PrintJson(resp)
 }
 
+func TestAllCrossChainEvent(t *testing.T) {
+	TestClient_QueryEvents(t)
+
+}
+
 func TestAll(t *testing.T) {
 	client_bfc_getChainIdentifier(t)
 	client_bfcx_getTotalSupply(t)
